@@ -34,6 +34,9 @@ const App = () => {
                 if (completed === e.completed || incomplete !== e.completed) {
                     return <Todo key={e.id} id={e.id} title={e.title} completed={e.completed} />
                 }
+                    else{
+                        return null;
+                    }
             }
             )}
         </div>
