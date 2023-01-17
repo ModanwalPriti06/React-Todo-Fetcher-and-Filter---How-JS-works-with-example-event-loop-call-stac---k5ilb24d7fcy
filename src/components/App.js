@@ -30,7 +30,7 @@ const App = () => {
                     <input onChange={(e) => { setIncomplete(e.target.checked) }} type="checkbox" checked={incomplete} id='incompleted-checkbox' /> InCompleted
                 </div>
             </div>
-            {loader ? <Loader /> :todo.filter((e)=>(completed === e.completed || incomplete !== e.completed))todo.map((e) => {
+            {loader ? <Loader /> :todo.map((e) => {
                 if (completed === e.completed || incomplete !== e.completed) {
                     return <Todo key={e.id} id={e.id} title={e.title} completed={e.completed} />
                 }
